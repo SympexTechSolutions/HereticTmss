@@ -1,1 +1,29 @@
 spring.application.name=Tmss
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/travel_db
+    username: root
+    password: azeem
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  thymeleaf:
+    cache: false
+    mode: HTML
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: DEBUG
